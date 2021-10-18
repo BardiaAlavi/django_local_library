@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+
+
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+
+      <div class="container embed-responsive embed-responsive-6by1" >
+        <h1>Welcome to our life!</h1>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="{% static 'media/Engagement.mp4' %}" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+
+
+{% endblock %}

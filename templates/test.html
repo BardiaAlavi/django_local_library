@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <h1>You are now logged in!</h1>
+  <h2><a href="{% url 'Groups:all'%}">Go to Groups</a></h2>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+      </ol>
+
+<div class="carousel-inner">
+{% for picture in book_list %}
+    {% if forloop.first %}
+        <div class="carousel-item active  ">
+
+    {% else %}
+        <div class="carousel-item  ">
+
+    {% endif %}
+
+    <img src="{{picture.image.url}}" alt="Responsive image" class='img-fluid d-block w-100 h-100'>
+</div>
+
+
+
+{% endfor %}
+
+
+
+<!-- Optional: some overlay text to describe the video -->
+
+
+
+
+{% endblock %}
