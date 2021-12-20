@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-68n%i0mx^zi$^e%1j&0c*2uyh^%&(rkjcuiqkckcncm#@^f2p)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 CORS_ORIGIN_ALLOW_ALL = DEBUG
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -82,13 +82,14 @@ WSGI_APPLICATION = 'ArezooNameh.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+
+}
+""" below is the databse setting just put in the above if does not work
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
-
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
